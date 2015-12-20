@@ -21,7 +21,7 @@
 # THE SOFTWARE.
 
 #general settings
-title-text: "GhostBSD Bootloader"
+title-text: "GhostBSD Boot Menu"
 title-font: "DejaVu Sans Bold 14"
 title-color: "#fff"
 message-font: "DejaVu Sans Regular 12"
@@ -31,17 +31,20 @@ terminal-box: "terminal_box_*.png"
 terminal-font: "DejaVu Sans Regular 12"
 desktop-image: "starfield.png"
 
-#help bar at the bottom
-+ label {
-	top = 100%-25
-	left = 0
-	width = 100%
-	height = 20
-	text = "@KEYMAP_MIDDLE@"
-	align = "center"
-	font = "DejaVu Sans Regular 10"
-	color = "#FFF"
+# help bar at the bottom
++ hbox {
+    top = 100%-35
+    left = 13%
+    + label { text = "↑↓" color = "#007FFF" }
+    + label { text = ":select       " color = "#DCDCDC" }
+    + label { text = "enter" color = "#007FFF" }
+    + label { text = ":boot       " color = "#DCDCDC" }
+    + label { text = "e" color = "#007FFF" }
+    + label { text = ":edit       " color = "#DCDCDC" }
+    + label { text = "c" color = "#007FFF" }
+    + label { text = ":command-line" color = "#DCDCDC" }
 }
+
 
 #boot menu
 + boot_menu {
@@ -67,16 +70,18 @@ desktop-image: "starfield.png"
 }
 
 #progress bar
-#+ progress_bar {
-#	id = "__timeout__"
-#	left = 15%
-#	top = 80%
-#	height = 20
-#	width = 70%
-#	font = "DejaVu Sans Regular 12"
-#	text_color = "#000"
-#	fg_color = "#fff"
-#	bg_color = "#6ac"
-#	border_color = "#fff"
-#	text = "@TIMEOUT_NOTIFICATION_LONG@"
-#}
++ progress_bar {
+	id = "__timeout__"
+	left = 15%
+	top = 80%
+	height = 20
+	width = 70%
+	font = "DejaVu Sans Regular 12"
+	text_color = "#fff"
+	fg_color = "#000"
+	bg_color = "#007FFF"
+	border_color = "#fff"
+	text = "@TIMEOUT_NOTIFICATION_LONG@"
+}
+
+
