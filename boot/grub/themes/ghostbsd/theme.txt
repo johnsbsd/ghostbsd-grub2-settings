@@ -78,8 +78,8 @@ desktop-image: "starfield.png"
 	width = 70%
 	font = "DejaVu Sans Regular 12"
 	text_color = "#fff"
-	fg_color = "#000"
-	bg_color = "#007FFF"
+	fg_color = "#007FFF"
+	bg_color = "#000"
 	border_color = "#fff"
 	text = "@TIMEOUT_NOTIFICATION_LONG@"
 }
